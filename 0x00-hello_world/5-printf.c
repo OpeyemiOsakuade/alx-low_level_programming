@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints with proper grammar, but the outcome is a piece of art with new line
+ * main - prints text
  * Return: (0) if program runs properly
  */
 int main(void)
