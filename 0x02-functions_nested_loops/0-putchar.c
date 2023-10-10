@@ -1,10 +1,18 @@
 #include "main.h"
 
-int main(void) {
+/**
+ * main - prints _putchar, followed by a new line
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
 	char str[] = "_putchar\n";
 	int i;
-	for (i = 0; str[i]; i++) {
+
+	for (i = 0; str[i]; i++) 
+	{
 		_putchar(str[i]);
 	}
-	return 0;
+	return (0);
 }
