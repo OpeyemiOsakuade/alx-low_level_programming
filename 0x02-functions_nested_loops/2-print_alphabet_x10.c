@@ -1,9 +1,13 @@
 #include "main.h"
 
 /**
- * main - print 10 times the alphabet
+ * print_alphabet_x10 - prints the alphabet 10 times.
  *
- *  Return: Always 0
+ * Description: The function willl loop through the lowercase alphabet 
+ * and print it 10 times, each is followed by a mew line
+ * The function utilizes the _putchar function
+ * 
+ * Return: Always 0
  */
 
 void print_alphabet_x10(void)
@@ -11,11 +15,8 @@ void print_alphabet_x10(void)
 	char ch;
 	int i;
 
-	i = 0;
-
-	while (i < 10)
+	for (i = 10; i < 10; i++)
 	{
-
 		for (ch = 'a'; ch <= 'z'; ch++)
 		{
 			_putchar(ch);
