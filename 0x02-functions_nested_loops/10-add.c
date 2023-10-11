@@ -7,9 +7,10 @@
  *
  * Description: The function adds the value of two integers
  * and return the results.
- *  
- * Return: returns the sum of a and b
+ *
+ * Return: returns the sum of a and b.
  */
+
 int add(int a, int b)
 {
 	return (a + b);
