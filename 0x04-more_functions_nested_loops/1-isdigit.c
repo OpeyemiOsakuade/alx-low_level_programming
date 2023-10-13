@@ -1,3 +1,6 @@
+#include <stdio>
+#include main.h
+
 /**
  * _isdigit - function is digit
  *
