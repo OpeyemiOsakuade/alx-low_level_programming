@@ -3,6 +3,7 @@
 /**
  * _atoi - converts a string into an integer
  * @s: pointer to the string to be converted
+ * Return: reslt *sign
  */
 
 int _atoi(char *s)
@@ -25,5 +26,5 @@ int _atoi(char *s)
 		i++;
 	}
 
-	return result * sign;
+	return (result * sign);
 }
