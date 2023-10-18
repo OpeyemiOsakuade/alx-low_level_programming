@@ -1,12 +1,13 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
  * print_array - prints number of elements of an array of integers
  * followed by a new line, seperated by a comma
  * @a - the pointer to the array of integers
  */
 
-void print_arrray(int *a, int n)
+void print_array(int *a, int n)
 {
 	int i;
 
