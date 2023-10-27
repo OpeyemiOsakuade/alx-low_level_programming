@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * sqrt_recursion - returns the natural square root of a number
- * @n: number whose square root to be calculated
+ * sqrt_helper - recures to find the natural square of the number
+ * @n: number to be calculated
+ * @i: iterator
  *
  * Return: the resulting square root
  */
@@ -16,9 +17,8 @@ int sqrt_helper(int n, int i)
 }
 
 /**
- * sqrt_helper - recures to find the natural square of the number
- * @n: number to be calculated
- * @i: iterator
+ * sqrt_recursion - returns the natural square root of a number
+ * @n: number whose square root to be calculated
  *
  * Return: the resulting square root
  */
