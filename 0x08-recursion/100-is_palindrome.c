@@ -43,7 +43,6 @@ int is_palindrome(char *s)
 
 	if (!*s)
 		return (1);
-	return (1);
 
 	return (compare_chars(s, 0, length));
 }
