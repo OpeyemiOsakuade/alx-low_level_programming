@@ -12,12 +12,20 @@ int sqrt_helper(int n, int i)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	return (sqrt_helper(n,i + 1));
+	return (sqrt_helper(n, i + 1));
 }
 
-int _sqrt_recursion (int n)
+/**
+ * sqrt_helper - recures to find the natural square of the number
+ * @n: number to be calculated
+ * @i: iterator
+ *
+ * Return: the resulting square root
+ */
+
+int _sqrt_recursion(int n)
 {
 	if (n <= 0)
 		return (-1);
-	return sqrt_helper(n, 1);
+	return (sqrt_helper(n, 1));
 }
