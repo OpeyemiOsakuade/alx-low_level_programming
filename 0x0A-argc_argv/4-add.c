@@ -1,5 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <stdbool.h>
+
+/**
+ * isValidNumber - checks for negative nubers or invalid charaters
+ * @str: the input to be checked
+ * Return: True if valid, else False
+ */
+
+bool isValidNumber(const char *str)
+{
+	int i;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == '-' || !isdigit(str[i]))
+		{
+			return (false);
+		}
+	}
+	return (true);
+
+}
+
+
 
 /**
  * main - add positive numbers
@@ -16,12 +40,12 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		num = atoi(argv[i]);
-		if (num > 0)
+		if (isValidNumber(argv[i]))
 		{
+			num = atoi(argv[i]);
 			sum += num;
 		}
-		if (num == 0)
+		else
 		{
 			printf("Error\n");
 			return (1);
