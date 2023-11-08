@@ -6,7 +6,7 @@
  * _strlen - calculate the length of a string
  * @str: string length
  *
- * Returns length of string
+ * Return: length of string
  */
 size_t _strlen(const char *str)
 {
@@ -14,7 +14,6 @@ size_t _strlen(const char *str)
 
 	for (s = str; *s; ++s)
 	{
-	
 	}
 	return (s - str);
 }
