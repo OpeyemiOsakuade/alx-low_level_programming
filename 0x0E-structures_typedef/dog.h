@@ -1,25 +1,20 @@
 #ifndef DOG_H
 #define DOG_H
-/**
- * struct dog - basic description of a dog
- * @name: First element
- * @owner: Second element
- * @age: Third element
- *
- */
-
-struct dog
-{
-	char *name;
-	char *owner;
-	float age;
-};
 
 /**
  * dog_t - typedef for struct dog
  */
-typedef struct dog dog_t;
+
+typedef struct dog 
+{
+	char *name;
+	char *owner;
+	float age;
+}dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+size_t _strlen(const char *str);
+char *str_dup(const char *str);
 #endif
