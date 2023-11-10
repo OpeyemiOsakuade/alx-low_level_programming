@@ -14,8 +14,9 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t i;
-	for(i = 0; i < size; i++)
+	unsigned int i;
+
+	for (i = 0; i < size; i++)
 	{
 		/*apply the fuction-action to every element in the array*/
 		action(array[i]);
