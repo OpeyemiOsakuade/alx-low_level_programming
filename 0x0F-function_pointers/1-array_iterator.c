@@ -1,3 +1,5 @@
+#include "function_pointers.h"
+
 /**
  * array_iterator - function designed to iterate
  * over an array of integers and apply a given
