@@ -8,13 +8,14 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0;
-	char *str, *sep = "";
+	char *str, format_char;
 
 	va_start(args, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
-		switch (format[i])
+		format_char = format[i];
+		switch (format_char)
 		{
 			case 'c':
 				printf("%c", va_arg(args, int)); /* char is promoted to int */
@@ -29,14 +30,13 @@ void print_all(const char * const format, ...)
 				str = va_arg(args, char *);
 				if (str == NULL)
 					str = "(nil)";
-				printf("%s%s", sep, str);
+				printf("%s", str);
 				break;
 		}
-		if (format[i + 1] != '\0')
+		if (format[i + 1] != '\0' && (format_char == 'c' || format_char == 'i' || format_char == 'f' || format_char == 's'))
 		{
 			printf(", ");
 		}
-		sep = ",";
 		i++;
 	}
 	va_end(args);
