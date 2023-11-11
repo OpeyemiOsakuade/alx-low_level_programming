@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	while(format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		format_char = format[i];
 		if (format_char == 'c')
@@ -32,7 +32,8 @@ void print_all(const char * const format, ...)
 		else if (format_char == 's')
 		{
 			str = va_arg(args, char *);
-			printf("%s", str ? str : "(nil)"); /*condition ? expression_if_true : expression_if_false. */
+			printf("%s", str ? str : "(nil)");
+			/*condition ? expression_if_true : expression_if_false. */
 		}
 
 		if (format[i + 1] != '\0')
