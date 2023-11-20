@@ -4,13 +4,14 @@
 /**
  * create_array - function that crates an array,
  * intializes it with a specific char
- * @size:size of the arrray to crate
+ * @size: size of the arrray to crate
  * @c: char initialize the array c
- *
+ * Description: Creates an array of chars, and initializes it with a specific
+ * char.
  * Return: pointer to the array (Success), NULL (Error)
  */
 
-char *create_array(unsigned int size, char)
+char *create_array(unsigned int size, char c)
 {
 	size_t i;
 	char *ptr_array;
