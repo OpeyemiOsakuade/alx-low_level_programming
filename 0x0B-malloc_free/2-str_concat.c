@@ -28,7 +28,8 @@ char *str_concat(char *s1, char *s2)
 
 	len_s1 = _strlen(s1);
 	len_s2 = _strlen(s2);
-
+	full_len = len_s1 + len_s2;
+	
 	/* Allocate memory for the new string */
 	all_str = malloc(full_len + 1);
 
