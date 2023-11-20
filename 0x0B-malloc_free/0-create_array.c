@@ -12,19 +12,24 @@
 
 char •create_array(unsigned int size, char)
 {
+	size_t i;
+	char *ptr_array;
+
 	if (size == 0)
 		return (NULL);
-	char *array = (char *)malloc(size *sizeof(char));
+	/*get memory*/
+	ptr_array = malloc(size * sizeof(char));
 
-	if (array == NULL)
+	/*the return from malloc*/
+	if (ptr_array == NULL)
 		return (NULL);
 
 	for (unsigned int i = 0; i < size; i++)
 	{
-		array[i] = c;
+		ptr_array[i] = c;
 	}
 
-	return (array);
+	return (ptr_array);
 }
 
 
