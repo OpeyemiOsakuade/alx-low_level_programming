@@ -10,7 +10,7 @@
  * Return: pointer to the array (Success), NULL (Error)
  */
 
-char •create_array(unsigned int size, char)
+char *create_array(unsigned int size, char)
 {
 	size_t i;
 	char *ptr_array;
@@ -24,12 +24,10 @@ char •create_array(unsigned int size, char)
 	if (ptr_array == NULL)
 		return (NULL);
 
-	for (unsigned int i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		ptr_array[i] = c;
 	}
 
 	return (ptr_array);
 }
-
-
