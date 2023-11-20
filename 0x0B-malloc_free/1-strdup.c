@@ -2,35 +2,56 @@
 #include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a new
- * string a duplicate of the str
+ * _strdup - returns a pointer to a newly allocated space in memory,
+ * whivh contains a duplicate of the str given a parameter.
  * @str: string to duplicate
+ * Description: Returns a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter.
  *
  * Return: pointer to the copied string
  */
 
 char *_strdup(char *str)
 {
+	unsigned int i;
+	unsigned int length;
+	char *ptr_duplicate;
+
 	if (str == NULL)
 		return (NULL);
 
-	unsigned int length = 0;
+	length = _strlen(str);
+	ptr_duplicate = malloc((length + 1) * sizeof(char));
 
-	while (str[length] != '\0')
-	{
-		length++;
-	}
-
-	char *duplicate = (char *)malloc((length + 1) * sizeof(char));
-
-	if (duplicate == NULL)
+	if (ptr_duplicate == NULL)
 		return (NULL);
 
-	for (unsigned int = 0; i < length; i++)
+	for (i = 0; i < length; i++)
 	{
-		duplicate[i] = str[i];
+		ptr_duplicate[i] = str[i];
 	}
-	duplicate[length] = '\0';
 
-	return (duplicate);
+	return (ptr_duplicate);
+}
+
+/**
+ * _strlen - Returns the length of a string.
+ * @s: The string whose length is to be returne
+ * DDescription: Returns the length of a string.
+ * Return: The length of the string, s.
+ */
+
+int _strlen(char *s)
+{
+	int len;
+	int counter;
+
+	counter = 0;
+	len = 0;
+	while (*(s + counter) != '\0')
+	{
+		len++;
+		counter++;
+	}
+	return (len);
 }
