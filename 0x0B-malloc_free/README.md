@@ -36,3 +36,9 @@ Deallocating Multidimensional Arrays: Since the grid is a 2-dimensional array dy
 Order of Freeing: It's crucial to free the memory in the reverse order of allocation. First, free each row (which was allocated last in alloc_grid), and then free the array of row pointers.
 
 Handling NULL Pointers: The free function safely handles NULL pointers, so it's not necessary to check if grid or grid[i] is NULL before calling free.
+
+##### Loop Through Rows: The function iterates over each row using 		a loop up to height. This is necessary because each row is a dynamically allocated array that must be individually freed.
+
+##### Free Rows: free(grid[i]) is called for each row to deallocate the memory allocated for that row.
+
+##### Free Grid Pointer: After all the rows have been freed, the function frees the memory allocated for the grid itself, which is an array of pointers (int**).
