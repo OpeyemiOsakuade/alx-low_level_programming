@@ -12,11 +12,10 @@
 static int _strlen(char *str)
 {
 	int len;
+
 	len = 0;
-	
 	while (str && str[len])
 		len++;
-	
 	return (len);
 }
 
@@ -33,18 +32,17 @@ char *str_concat(char *s1, char *s2)
 {
 	char *new_str;
 	int i, j, len_s1, len_s2;
-	
-	len_s1 =_strlen(s1);
-	len_s2 =_strlen(s2);
+
+	len_s1 = _strlen(s1);
+	len_s2 = _strlen(s2);
 
 	/* Allocate memory for the new string */
 	new_str = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
-	
 	/*Handle null inputs*/
-        if (new_str == NULL)
-        {
-                return (NULL);
-        }
+	if (new_str == NULL)
+	{
+		return (NULL);
+	}
 
 	/* add contents of s1 */
 	for (i = 0; i < len_s1; i++)
