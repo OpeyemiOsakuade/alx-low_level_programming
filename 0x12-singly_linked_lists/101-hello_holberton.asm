@@ -1,5 +1,5 @@
 section .data
-	helloString db "Hello, Holberton\n", 0xA, 0x0	; String with newline and null terminator
+	helloString db "Hello, Holberton", 0xA, 0x0	; String with newline and null terminator
 
 section .text
 	global main
