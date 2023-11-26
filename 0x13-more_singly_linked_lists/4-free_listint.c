@@ -1,13 +1,13 @@
 #include "lists.h"
 
 /**
- * free_list - function that frees a list_t list
+ * free_listint - function that frees a listint_t list
  * @head: pointer to the head of the list
  */
 
-void free_list(list_t *head)
+void free_listint(listint_t *head)
 {
-	list_t *temp;
+	listint_t *temp;
 
 	while (head != NULL)
 	{
@@ -16,8 +16,6 @@ void free_list(list_t *head)
 		/* move to the next node */
 		head = head->next;
 
-		/* free the string in the current node */
-		free(temp->str);
 		/* Free the current node */
 		free(temp);
 	}
